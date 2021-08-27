@@ -1,0 +1,68 @@
+@import "reset.css";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: cornflowerblue;
+}
+.momentum-header {
+  padding: 13px 20px;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.momentum-header__search-bar > span {
+  font-size: 15px;
+  font-weight: 600;
+}
+.momentum-header__search-bar {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+.search-google {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 10px;
+  border-bottom: solid;
+}
+#search-google__submit {
+  position: absolute;
+  background-color: transparent;
+  border: none;
+  left: 0;
+}
+.search-google__input {
+  position: relative;
+  height: 36px;
+  width: 200px;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+}
+.search-google__submit-label {
+  position: absolute;
+  left: 0;
+  font-size: 15px;
+}
+.fa-google {
+  position: absolute;
+  right: 0;
+  font-size: 13px;
+}
+.momentum-header__status {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  color: white;
+}
+.momentum-header__status > .momentum-header__weather {
+  font-size: 25px;
+  font-weight: 600;
+}
+.momentum-header__status > span {
+  font-size: 13px;
+}
