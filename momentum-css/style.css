@@ -6,16 +6,62 @@
 body {
   background-color: cornflowerblue;
 }
+.first-screen {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+.login-form > h1 {
+  color: white;
+}
+.login-form > form > input[type="text"] {
+  border: none;
+  border-bottom: 1px white solid;
+  background-color: transparent;
+  text-align: center;
+  width: 340px;
+  height: 50px;
+  font-size: 30px;
+  color: white;
+}
+.login-form > form > input[type="text"]:focus {
+  outline: none;
+}
+.login-form > form input[type="submit"] {
+  border: none;
+  background: transparent;
+  width: 0;
+  height: 0;
+}
+
+.hidden {
+  display: none;
+}
+
+.momentum {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .momentum-header {
-  padding: 13px 20px;
+  padding: 1.2% 2.2%;
   width: 100vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .momentum-header__search-bar > span {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 20px;
+  opacity: 0.9;
+  cursor: pointer;
+  transition: opacity 0.1s ease-in-out;
+}
+.momentum-header__search-bar > span:hover {
+  opacity: 1;
 }
 .momentum-header__search-bar {
   display: flex;
@@ -27,7 +73,14 @@ body {
   align-items: center;
   position: relative;
   margin-left: 10px;
-  border-bottom: solid;
+  border-bottom: 1px solid rgb(255, 255, 255, 0);
+  transition: border-bottom-color 0.2s ease-in-out;
+}
+.search-google:hover {
+  border-bottom-color: rgb(255, 255, 255, 0.5);
+}
+.search-google:focus-within {
+  border-bottom-color: rgb(255, 255, 255, 1);
 }
 #search-google__submit {
   position: absolute;
@@ -35,13 +88,17 @@ body {
   border: none;
   left: 0;
 }
-.search-google__input {
+#search-google__input {
   position: relative;
   height: 36px;
   width: 200px;
   background-color: transparent;
   border: none;
-  border-bottom: 1px solid white;
+  margin-left: 20px;
+  cursor: pointer;
+}
+#search-google__input:focus {
+  outline: none;
 }
 .search-google__submit-label {
   position: absolute;
@@ -52,6 +109,14 @@ body {
   position: absolute;
   right: 0;
   font-size: 13px;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+.search-google:hover > .fa-google {
+  opacity: 0.5;
+}
+.search-google:focus-within > .fa-google {
+  opacity: 1;
 }
 .momentum-header__status {
   display: flex;
@@ -65,4 +130,16 @@ body {
 }
 .momentum-header__status > span {
   font-size: 13px;
+}
+.momentum-clock {
+  font-size: 180px;
+  font-weight: 500;
+  color: white;
+  margin-top: 27%;
+}
+.momentum-greeting {
+  font-size: 50px;
+  margin-top: 2%;
+  font-weight: 600;
+  color: white;
 }

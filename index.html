@@ -13,33 +13,45 @@
     <link rel="stylesheet" href="momentum-css/style.css" />
   </head>
   <body>
-    <header class="momentum-header">
-      <div class="momentum-header__search-bar">
-        <span>Links</span>
-        <form class="search-google">
-          <input id="search-google__submit" type="submit" value=" " />
-          <label
-            class="search-google__submit-label"
-            for="search-google__submit"
-          >
-            <i class="fas fa-search"></i>
-          </label>
-          <input class="search-google__input" type="text" />
-          <i class="fab fa-google"></i>
+    <div class="first-screen hidden">
+      <div class="login-form">
+        <h1>Hello, what`s your name?</h1>
+        <form>
+          <input type="text" maxlength="15" required />
+          <input class="login-form__submit" type="submit" value="" />
         </form>
       </div>
-      <div class="momentum-header__status">
-        <div class="momentum-header__weather">
-          <i class="fas fa-cloud"></i>
-          <span>22</span>
+    </div>
+    <div class="momentum">
+      <header class="momentum-header">
+        <div class="momentum-header__search-bar">
+          <span>Links</span>
+          <label for="search-google__input">
+            <form class="search-google">
+              <div class="search-google__submit-label">
+                <i class="fas fa-search"></i>
+              </div>
+              <input id="search-google__input" type="search" />
+              <i class="fab fa-google"></i>
+            </form>
+          </label>
         </div>
-        <span>Gyeonggi-do</span>
-      </div>
-    </header>
-
+        <div class="momentum-header__status">
+          <div class="momentum-header__weather">
+            <i class="fas fa-cloud"></i>
+            <span>22</span>
+          </div>
+          <span>Gyeonggi-do</span>
+        </div>
+      </header>
+      <div class="momentum-clock"></div>
+      <span class="momentum-greeting"></span>
+    </div>
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
       crossorigin="anonymous"
     ></script>
+    <script src="momentum-js/greeting.js"></script>
+    <script src="momentum-js/clock.js"></script>
   </body>
 </html>
