@@ -31,7 +31,7 @@
               <div class="search-google__submit-label">
                 <i class="fas fa-search"></i>
               </div>
-              <input id="search-google__input" type="search" />
+              <input id="search-google__input" type="text" />
               <i class="fab fa-google"></i>
             </form>
           </label>
@@ -46,6 +46,40 @@
       </header>
       <div class="momentum-clock"></div>
       <span class="momentum-greeting"></span>
+      <form class="momentum-focus">
+        <span>What is your main focus for today?</span>
+        <input type="text" />
+        <input type="submit" />
+      </form>
+      <div class="momentum-focuson hidden">
+        <span>TODAY</span>
+        <div class="momentum-focuson__user-focus">
+          <div class="momentum-focuson__box check-box">
+            <i class="fas fa-check hidden"></i>
+          </div>
+          <span class="momentum-focuson__text check-box"></span>
+          <i class="fas fa-ellipsis-h"></i>
+        </div>
+      </div>
+      <footer class="momentum-footer">
+        <div class="momentum-footer__inf">
+          <i class="fas fa-cog"></i>
+          <span class="momentum-footer__location"></span>
+        </div>
+        <div class="momentum-footer__saying">
+          <span class="momentum-footer__text"
+            >One of the greatest discoveries a person makes is to find they can
+            do what they were afraid they couldn't do.</span
+          >
+          <div class="momentum-footer__saying-inf">
+            <span></span>
+            <i class="far fa-heart"></i>
+            <i class="fas fa-sync"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+        <div class="momentum-footer__todolist">Todo</div>
+      </footer>
     </div>
     <script
       src="https://kit.fontawesome.com/6478f529f2.js"
@@ -53,5 +87,8 @@
     ></script>
     <script src="momentum-js/greeting.js"></script>
     <script src="momentum-js/clock.js"></script>
+    <script src="momentum-js/background.js"></script>
+    <script src="momentum-js/focus.js"></script>
+    <script src="momentum-js/saying.js"></script>
   </body>
 </html>

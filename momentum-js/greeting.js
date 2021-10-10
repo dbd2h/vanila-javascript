@@ -15,14 +15,12 @@ function toggleTool() {
 }
 
 const onClick = function (event) {
-  event.preventDefault();
   username = $input.value;
   localStorage.setItem(USERNAME_KEY, username);
-  setTimeout(toggleTool, 1000);
 };
 
 function timeSelect() {
-  const hourNow = new Date().getHours;
+  const hourNow = new Date().getHours();
   if (hourNow < 6) {
     $greeting.innerHTML = `Good Night ${username}.`;
   } else if (hourNow >= 6 || hourNow < 12) {
