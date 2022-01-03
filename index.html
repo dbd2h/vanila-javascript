@@ -78,6 +78,27 @@
             <i class="fab fa-twitter"></i>
           </div>
         </div>
+        <div class="todoscreen hidden">
+          <div class="todoscreen-header">
+            <div class="todoscreen-header__folderselect">
+              <span>Inbox</span>
+              <i class="fas fa-chevron-down"></i>
+            </div>
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
+          <div class="todoscreen-content">
+            <div class="checklists"></div>
+            <span>Add a todo to get started</span>
+            <div class="todoscreen-content__switch">
+              <span>Switch to Today</span>
+              <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="todoscreen-content__button">New Todo</div>
+            <form>
+              <input class="hidden" type="text" placeholder="New Todo" />
+            </form>
+          </div>
+        </div>
         <div class="momentum-footer__todolist">Todo</div>
       </footer>
     </div>
@@ -90,5 +111,6 @@
     <script src="momentum-js/background.js"></script>
     <script src="momentum-js/focus.js"></script>
     <script src="momentum-js/saying.js"></script>
+    <script src="momentum-js/todo.js"></script>
   </body>
 </html>

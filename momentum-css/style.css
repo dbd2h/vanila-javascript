@@ -262,12 +262,76 @@
   transform: translate(-50%, 0%);
   transition: opacity 0.2s ease-in-out;
 }
+.todoscreen {
+  background-color: white;
+  position: absolute;
+  padding: 10px;
+  border-radius: 5px;
+  right: 7px;
+  bottom: 65px;
+  height: 280px;
+  width: 350px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.todoscreen-header {
+  display: flex;
+  margin: 10px 15px;
+  height: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+.todoscreen-header__folderselect > span {
+  font-size: 23px;
+}
+.todoscreen-content {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.todoscreen-content > span {
+  font-size: 18px;
+  font-weight: 500;
+  opacity: 0.8;
+}
+.todoscreen-content__switch {
+  margin-top: 15px;
+  font-size: 15px;
+  opacity: 0.5;
+}
+.todoscreen-content__button {
+  margin-top: 20px;
+  padding: 10px;
+  width: 120px;
+  background-color: #c29b3c;
+  color: white;
+  font-size: 15px;
+  border-radius: 30px;
+}
+.todoscreen-content > form {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+}
+.todoscreen-content > form > input {
+  height: 50px;
+  width: 90%;
+  border: none;
+  font-size: 18px;
+  opacity: 0.8;
+}
+.todoscreen-content > form > input:focus {
+  outline: none;
+}
 .momentum-footer > div:last-child {
   width: 200px;
   display: flex;
   justify-content: flex-end;
   color: white;
   font-size: 20px;
+  cursor: pointer;
 }
 body > img {
   position: absolute;
