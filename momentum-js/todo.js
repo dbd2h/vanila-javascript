@@ -4,9 +4,10 @@ const $todoscreen = document.querySelector(".todoscreen");
 const $todoinput = document.querySelector(".todoscreen-content>input");
 const $checklists = document.querySelector(".checklists");
 const checklists = [];
+let todoTrue = false;
 
 $todoButton.addEventListener("click", () => {
-  if (!$todoscreen.classList.contains("hidden")) {
+  if (!$todoscreen.classList.contains("hidden") && !todoTrue) {
     $todoinput.classList.add("hidden");
     $newTodo.classList.remove("hidden");
   }
@@ -20,6 +21,7 @@ $newTodo.addEventListener("click", () => {
 
 $todoinput.addEventListener("keypress", (event) => {
   const content = event.target.value;
+  event.target.value = "";
   if (content == "" || event.key !== "Enter") {
     return;
   }
@@ -31,7 +33,11 @@ $todoinput.addEventListener("keypress", (event) => {
   const $checkSpan = document.createElement("span");
   $checkSpan.innerHTML = content;
   $checkEllipsis.setAttribute("class", "fas fa-ellipsis-h");
+  $checkIcon.setAttribute("class", "fas fa-check");
   $checkBox.append($checkIcon);
+  $checkBox.addEventListener("click", () => {
+    $div.classList.toggle("checked");
+  });
   $div.append($checkBox);
   $div.append($checkSpan);
   $div.append($checkEllipsis);
@@ -45,4 +51,5 @@ $todoinput.addEventListener("keypress", (event) => {
   document
     .querySelector(".todoscreen-content>.todoscreen-content__button")
     .classList.add("hidden");
+  todoTrue = true;
 });

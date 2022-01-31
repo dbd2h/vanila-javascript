@@ -304,25 +304,39 @@
   width: 100%;
   padding: 5px;
   display: flex;
+  position: relative;
 }
 .todoCheckList > div:first-child {
   height: 14px;
   width: 14px;
   border-radius: 4px;
   border: solid 1px;
-  margin-top: 10px;
+  margin-top: 5px;
   position: relative;
   margin-right: 10px;
 }
 .todoCheckList > div:first-child > i {
   position: absolute;
-  top: -5px;
-  left: -1px;
+  top: 2px;
+  left: 1px;
+  font-size: 8px;
+  color: white;
 }
 .todoCheckList > span {
   font-size: 20px;
 }
-
+.todoCheckList > i {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.checklists > .checked > div {
+  background-color: blue;
+}
+.checklists > .checked > span {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
 .todoscreen-content > span {
   font-size: 18px;
   font-weight: 500;
