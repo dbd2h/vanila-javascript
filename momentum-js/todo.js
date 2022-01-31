@@ -53,3 +53,9 @@ $todoinput.addEventListener("keypress", (event) => {
     .classList.add("hidden");
   todoTrue = true;
 });
+
+/*해야할 list
+1. 날씨
+2. todo ellipsis기능 살리기
+3. todo 데이터에 넣기
+*/
